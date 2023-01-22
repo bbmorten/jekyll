@@ -6,7 +6,7 @@ jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
 
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
@@ -22,20 +22,11 @@ jobs:
     - uses: helaili/jekyll-action@v2
       with:
         token: ${{ secrets.JEKYLL_PAT }}
-
-
-    # Specify the Jekyll source location as a parameter
-    - uses: helaili/jekyll-action@v2
-      with:
-        token: ${{ secrets.JEKYLL_PAT }}
         jekyll_src: '_site'
-
-
-    # Specify the target branch (optional)
-    - uses: helaili/jekyll-action@v2
-      with:
-        token: ${{ secrets.JEKYLL_PAT }}
         target_branch: 'gh-pages'
+
+
+
 
 
 

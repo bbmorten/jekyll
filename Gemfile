@@ -15,7 +15,7 @@ gem "minima", "~> 2.5"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 # frozen_string_literal: true
-gem "rake", "~>10.0"
+gem "rake", "~>13.0.6"
 
 
 group :jekyll_plugins do
